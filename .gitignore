@@ -1,0 +1,15 @@
+# Terraform state — contains resource map + potential secrets
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Plan output — can contain account IDs and ARNs
+*.tfplan
+
+# Variable files — may contain sensitive values
+*.tfvars
+*.tfvars.json
+
+# macOS noise
+.DS_Store
