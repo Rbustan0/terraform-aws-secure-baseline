@@ -4,10 +4,10 @@
 .terraform/
 .terraform.lock.hcl
 
-# Plan output — can contain account IDs and ARNs
+# Plan output
 *.tfplan
 
-# Variable files — may contain sensitive values
+# Variable files
 *.tfvars
 *.tfvars.json
 
