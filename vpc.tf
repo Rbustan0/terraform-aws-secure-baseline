@@ -32,3 +32,12 @@ resource "aws_subnet" "private" {
         Project = "terraform-aws-secure-baseline"
     }
 }
+
+resource "aws_internet_gateway" "main" {
+    vpc_id = aws_vpc.main.id
+
+    tags = {
+        Name    = "secure-baseline-igw"
+        Project = "terraform-aws-secure-baseline"
+    }
+}
