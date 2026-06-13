@@ -40,3 +40,13 @@ resource "aws_iam_role_policy" "terraform_execution" {
     ]
   })
 }
+
+resource "aws_iam_instance_profile" "terraform_execution" {
+  name = "terraform-execution-profile"
+  role = aws_iam_role.terraform_execution.name
+
+  tags = {
+    Name    = "terraform-execution-profile"
+    Project = "terraform-aws-secure-baseline"
+  }
+}
